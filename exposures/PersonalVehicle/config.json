@@ -1,0 +1,158 @@
+{
+  "abstract": false,
+  "displayName": "Personal Vehicle",
+  "extend": "VehicleBase",
+  "contents": [
+    "BodilyInjury!",
+    "PropertyDamage!",
+    "MedicalPayments!",
+    "OwnDamage?",
+    "Fire?",
+    "Theft?",
+    "ThirdParty?",
+    "Windscreen?",
+    "BabySeat?",
+    "Comprehensive?",
+    "RoadsideService?",
+    "UnderinsuredMotorist?",
+    "UninsuredMotorist?",
+    "Collision"
+  ],
+  "data": {
+    "vehicleType": {
+      "displayName": "Body Style",
+      "type": "string",
+      "maxLength": 20000,
+      "options": [
+        "Coupe",
+        "Sedan",
+        "Sport Utility",
+        "Pickup",
+        "Motorcycle",
+        "RV"
+      ]
+    },
+    "vehicleOwnership": {
+      "displayName": "Vehicle Ownership",
+      "type": "string?",
+      "maxLength": 20000,
+      "options": [
+        "Less than one month",
+        "At least one month but less than one year",
+        "At least one year but less than 3 years",
+        "At least 3 years but less than 5 years",
+        "5 years or more"
+      ]
+    },
+    "ownershipIndicator": {
+      "displayName": "Ownership Indicator",
+      "type": "string?",
+      "maxLength": 20000,
+      "options": [
+        "Owned - Not Financed",
+        "Owned - Financed",
+        "Leased"
+      ]
+    },
+    "vehicleLicenseState": {
+      "displayName": "Vehicle Registration State",
+      "type": "string?",
+      "maxLength": 20000,
+      "options": [
+        "NSW",
+        "VIC",
+        "QLD",
+        "TAS",
+        "NT",
+        "WA"
+      ]
+    },
+    "licensePlate": {
+      "displayName": "Rego Number",
+      "type": "string?",
+      "maxLength": 20000
+    },
+    "vehicleDamage": {
+      "displayName": "Vehicle Damage",
+      "type": "string?",
+      "maxLength": 20000,
+      "options": [
+        "No Damage",
+        "Hail Damage",
+        "Accident Damage"
+      ]
+    },
+    "primaryVehicleUse": {
+      "displayName": "Primary Vehicle Use",
+      "type": "string?",
+      "maxLength": 20000,
+      "options": [
+        "Personal",
+        "Business"
+      ]
+    },
+    "primaryDriverLicence": {
+      "displayName": "Primary Driver Licence Type",
+      "type": "string?",
+      "maxLength": 20000,
+      "options": [
+        "Learner Permit or Licence",
+        "Provisional/Probationary/Restricted licence",
+        "Full/Open licence",
+        "International licence"
+      ]
+    },
+    "vehicleAccessoriesValue": {
+      "displayName": "Vehicle Accessories Value",
+      "type": "string?",
+      "maxLength": 20000
+    },
+    "vehicleUsage": {
+      "displayName": "Vehicle Usage per week",
+      "type": "string?",
+      "maxLength": 20000,
+      "options": [
+        "1-2",
+        "3-4",
+        "5+"
+      ]
+    },
+    "garagingAddress": {
+      "displayName": "Vehicle Garaging Address",
+      "type": "Address"
+    },
+    "drivers": {
+      "displayName": "Drivers",
+      "type": "Driver*"
+    },
+    "redbook": {
+      "displayName": "Vehicle Details from Redbook",
+      "type": "Redbook"
+    },
+    "rollinApp": {
+      "displayName": "Details from Rollin App",
+      "type": "RollinApp"
+    },
+    "excess": {
+      "displayName": "Excess",
+      "type": "string",
+      "options": [
+        "100",
+        "200",
+        "300",
+        "500",
+        "600",
+        "900",
+        "1000",
+        "1500"
+      ]
+    }
+  },
+  "charges": [
+    "Premium",
+    "GST",
+    "Fee",
+    "FSL",
+    "SD"
+  ]
+}

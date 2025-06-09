@@ -1,0 +1,13 @@
+{
+  "abstract": false,
+  "displayName": "Bodily Injury",
+  "coverageTerms": [
+    "PADeductible!",
+    "PALimit!"
+  ],
+  "charges": [
+    "Premium",
+    "GST",
+    "Fee"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "displayName": "Standard Installment Plan",
+  "cadence": "fullPay",
+  "maxInstallmentsPerTerm": 1000,
+  "anchorMode": "termStartDay",
+  "generateLeadDays": 14,
+  "dueLeadDays": 0
+}

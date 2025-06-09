@@ -1,0 +1,14 @@
+{
+  "abstract": false,
+  "displayName": "Fire",
+  "coverageTerms": [
+    "PADeductible!",
+    "PALimit!"
+  ],
+  "charges": [
+    "Premium",
+    "GST",
+    "FSL",
+    "SD"
+  ]
+}

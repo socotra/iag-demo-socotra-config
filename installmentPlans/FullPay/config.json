@@ -1,0 +1,8 @@
+{
+  "displayName": "FullPay",
+  "cadence": "fullPay",
+  "maxInstallmentsPerTerm": 10,
+  "installmentWeights": [
+    2
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "splitLimit",
+  "displayName": "Split Limit",
+  "options": {
+    "PA50_100": {
+      "displayName": "$50,000 / $100,000",
+      "value": 150000
+    },
+    "PA100_200": {
+      "displayName": "$100,000 / $200,000",
+      "value": 300000
+    },
+    "*PA25_50": {
+      "displayName": "$25,000 / $50,000",
+      "value": 75000
+    },
+    "PA250_500": {
+      "displayName": "$250,000 / $500,000",
+      "value": 750000
+    },
+    "PA100_300": {
+      "displayName": "$100,000 / $300,000",
+      "value": 400000
+    }
+  }
+}

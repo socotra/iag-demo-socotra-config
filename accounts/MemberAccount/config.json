@@ -1,0 +1,44 @@
+{
+  "displayName": "Personal",
+  "abstract": false,
+  "extend": "BaseAccount",
+  "data": {
+    "firstName": {
+      "displayName": "First Name",
+      "type": "string",
+      "maxLength": 20000,
+      "tag": [
+        "accountList:true",
+        "searchAccountCard:true"
+      ]
+    },
+    "middleName": {
+      "displayName": "Middle Name",
+      "type": "string?",
+      "maxLength": 20000
+    },
+    "lastName": {
+      "displayName": "Last Name",
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 20000,
+      "tag": [
+        "accountList:true",
+        "searchAccountCard:true"
+      ]
+    },
+    "email": {
+      "displayName": "Email",
+      "type": "string",
+      "maxLength": 20000,
+      "regex": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$",
+      "tag": [
+        "searchAccountCard:true"
+      ]
+    }
+  },
+  "numberingPlan" : "CA_Account_numbering_plan",
+  "numberingString" : "CA",
+  "invoiceNumberingPlan" : "CA_Invoice_numbering_plan",
+  "numberingTrigger" : "creation"
+}

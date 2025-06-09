@@ -1,0 +1,12 @@
+{
+  "abstract": false,
+  "displayName": "Windscreen",
+  "coverageTerms": [
+    "PASplitLimit"
+  ],
+  "charges": [
+    "Premium",
+    "GST",
+    "Fee"
+  ]
+}

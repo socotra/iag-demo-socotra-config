@@ -1,0 +1,104 @@
+{
+  "abstract": false,
+  "displayName": "Personal Auto",
+  "eligibleAccountTypes": [
+    "MemberAccount"
+  ],
+  "contents": [
+    "PersonalVehicle+"
+  ],
+  "documents": [
+    "Forms",
+    "InvoiceDoc",
+    "Disclosure"
+  ],
+  "data": {
+    "priorclaims": {
+      "displayName": "How many prior claims have you had on the vehicle?",
+      "type": "string",
+      "maxLength": 20000,
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5+"
+      ]
+    },
+    "felony": {
+      "displayName": "Has any household member been convicted of a felony in the past 10 years?",
+      "type": "string",
+      "maxLength": 20000,
+      "options": [
+        "No",
+        "Yes"
+      ]
+    },
+    "fraud": {
+      "displayName": "Has any household member been convicted of activities related to insurance fraud?",
+      "type": "string",
+      "maxLength": 20000,
+      "options": [
+        "No",
+        "Yes"
+      ]
+    },
+    "claims": {
+      "type": "string",
+      "maxLength": 20000,
+      "displayName": "Had any insurance claim denied, cancelled or withdrawn during an investigation by the insurance provider?",
+      "options": [
+        "Yes",
+        "No"
+      ]
+    },
+    "suspendedLicense": {
+      "displayName": "Has any driver ever had a suspended license in last 5 years?",
+      "type": "string",
+      "maxLength": 20000,
+      "options": [
+        "No",
+        "Yes"
+      ],
+      "scope": "P"
+    },
+    "convictions": {
+      "displayName": "Has any driver been convicted of fraud, arson or theft?",
+      "type": "string",
+      "maxLength": 20000,
+      "options": [
+        "No",
+        "Yes"
+      ],
+      "scope": "P"
+    }
+  },
+  "staticData": {
+    "policyNumber": {
+      "displayName": "Policy Number",
+      "type": "string",
+      "maxLength": 20000,
+      "tag": [
+        "quoteList:true",
+        "policyList:true",
+        "searchQuoteCard:true",
+        "searchPolicyCard:true"
+      ]
+    }
+  },
+  "charges": [
+    "Premium",
+    "GST",
+    "Fee",
+    "FSL",
+    "SD"
+  ],
+  "defaultTermDuration": 6,
+  "numberingPlan" : "CA_Policy_numbering_plan",
+  "numberingString" : "ROL",
+  "numberingTrigger" : "creation"
+}
+
+
+

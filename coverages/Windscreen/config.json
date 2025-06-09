@@ -1,0 +1,14 @@
+{
+  "abstract": false,
+  "displayName": "Windscreen",
+  "coverageTerms": [
+    "PADeductible!",
+    "PALimit!"
+  ],
+  "charges": [
+    "Premium",
+    "GST",
+    "FSL",
+    "SD"
+  ]
+}

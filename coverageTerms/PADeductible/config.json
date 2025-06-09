@@ -1,0 +1,41 @@
+{
+  "type": "deductible",
+  "displayName": "Deductible",
+  "options": {
+    "PAD2000": {
+      "displayName": "$2,000",
+      "value": 2000,
+      "tag": "Two Thousand"
+    },
+    "PAD500": {
+      "displayName": "$500",
+      "value": 500,
+      "tag": "Five Hundred"
+    },
+    "PAD1500": {
+      "displayName": "$1,500",
+      "value": 1500,
+      "tag": "One Thousand Five Hundred"
+    },
+    "PAD750": {
+      "displayName": "$750",
+      "value": 750,
+      "tag": "Seven Hundred Fifty"
+    },
+    "PAD100": {
+      "displayName": "$100",
+      "value": 100,
+      "tag": "One Hundred"
+    },
+    "*PAD1000": {
+      "displayName": "$1,000",
+      "value": 1000,
+      "tag": "One Thousand"
+    },
+    "PAD250": {
+      "displayName": "$250",
+      "value": 250,
+      "tag": "Two Hundred Fifty"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "appliesTo" : [ "quote", "transaction" ],
+  "exclusive" : false,
+  "qualification" : {
+    "underwriting" : "UW-2"
+  }
+}

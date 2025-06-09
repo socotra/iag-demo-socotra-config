@@ -1,0 +1,10 @@
+{
+  "displayName": "Policy Forms Packet",
+  "format": "pdf",
+  "pageSize": "letter",
+  "portrait": true,
+  "rendering": "prerendered",
+  "scope": "policy",
+  "selectionTimeBasis": "policyStartTime",
+  "trigger": "issued"
+}

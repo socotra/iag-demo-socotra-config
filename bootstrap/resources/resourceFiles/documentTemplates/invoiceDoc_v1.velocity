@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://socotra-demo-assets.s3.us-east-1.amazonaws.com/curi/curi.css">
+    <title>Socotra Dynamic Doc Sample</title>
+
+</head>
+
+
+
+
+<body>
+    <p class="s1" style="padding-left: 12pt; text-align: center;">
+        <h1 style="padding-top: 3pt; padding-bottom: 1pt; padding-left: 6pt; line-height: 14pt; text-align: center; font-size: 20px;">
+        THE PERSONAL AUTO INSURANCE COMPANY OF CALIFORNIA</h1>
+    <p class="s1" style="padding-top: 3pt; padding-left: 12pt; text-align: center;">
+        <img width="600" height="11" alt="image" src="https://socotra-demo-assets.s3.us-east-1.amazonaws.com/curi/Image_002.png"/></p>
+    
+    <h1 style="padding-top: 3pt; padding-left: 6pt; line-height: 14pt; text-align: center;">
+        PERSONAL AUTO INSURANCE POLICY
+    </h1>
+
+
+<p class="s2" style="padding-left: 6pt;text-indent: 0pt;line-height: 14pt;text-align: center;">INVOICE DETAILS</p>
+
+<p style="text-indent: 0pt;text-align: left;"><br/></p>
+
+
+ <table style="border-collapse: collapse; margin-left: 6.25pt;" cellspacing="0">
+<tr style="height: 15pt;">
+            <td style="width: 536pt; border: 1pt solid; background-color: #004B96;" colspan="3">
+                <p class="s4" style="padding-left: 1pt; padding-right: 4pt; text-align: center;">Invoice Summary</p>
+            </td>
+        </tr>
+        <tr style="height: 71pt;">
+            <td style="width: 271pt; border: 1pt solid;">
+              <br>
+              <b>Invoice Number:</b><br>
+              <b>Invoiced Period:</b><br>
+              <b>Invoice Total: </b><br>
+              <b>Outstanding Balance: </b><br>
+            </td>
+            <td style="width: 265pt; border: 1pt solid;">
+              <br>
+              ${data.invoiceNumber}<br>
+              ${data.startTime.substring(0, 10)} through ${data.endTime.substring(0, 10)}<br>
+              $${data.totalAmount}<br>
+              $${data.totalRemainingAmount}<br>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <br>
+
+    <table style="border-collapse: collapse; margin-left: 6.675pt;" cellspacing="0">
+        <tr style="height: 15pt;">
+            <td style="width: 536pt; border: 1pt solid; background-color: #004B96;" colspan="3">
+                <p class="s4" style="padding-left: 1pt; padding-right: 4pt; text-align: center;">Invoice Line Items</p>
+            </td>
+        </tr>
+        <tr style="height: 29pt;">
+            <td style="width: 90pt; border: 1pt solid; background-color: #004B96;">
+                <p style="text-align: left;"><br/></p>
+                <p class="s4" style="padding-left: 5pt; text-align: left;">Category</p>
+            </td>
+            <td style="width: 365pt; border: 1pt solid; background-color: #004B96;">
+                <p style="text-align: left;"><br/></p>
+                <p class="s4" style="padding-left: 5pt; text-align: left;">Type</p>
+            </td>
+            <td style="width: 90pt; border: 1pt solid; background-color: #004B96;">
+                <p style="text-align: left;"><br/></p>
+                <p class="s4" style="padding-left: 5pt; text-align: left;">Amount</p>
+            </td>
+        </tr>
+        
+        <ul>
+#*            #foreach ($invoiceItemSummary in $data.policyInvoiceSummaries.invoiceItemSummaries)
+                <tr style="height: 31pt;">
+                    <td style="width: 90pt; border: 1pt solid;">
+                        <p class="s5" style="text-align: left;">${invoiceItemSummary.elementType} - ${invoiceItemSummary.chargeCategory}</p>
+                    </td>
+                    <td style="width: 365pt; border: 1pt solid;">
+                        <p class="s5" style="text-align: left;">${invoiceItemSummary.chargeType}</p>
+                    </td>
+                    <td style="width: 90pt; border: 1pt solid;">
+                        <p class="s5" style="padding-right: 4pt; text-align: right;">$${invoiceItemSummary.amount}</p>
+                    </td>
+                </tr>
+            #end*#
+        </ul>
+        <tr style="height: 31pt;">
+          <td style="width: 455pt; border: 1pt solid;">
+              <p class="s5" style="text-align: left;"><b>Total</b></p>
+          </td>
+          <td style="width: 90pt; border: 1pt solid;">
+              <p class="s5" style="padding-right: 4pt; text-align: right;"></p>
+                    </td>
+          <td style="width: 90pt; border: 1pt solid;">
+              <p class="s5" style="padding-right: 4pt; text-align: right;">$${data.totalAmount}</p>
+          </td>
+      </tr>
+    </table>
+
+</body>

@@ -1,0 +1,7 @@
+scope,productLine,ruleId,key,condition,value,decision,message
+uwRule,PersonalAuto,1,.personalAuto.vehicle.value,>,100000,block,"Vehicle value exceeds 100,000"
+uwRule,PersonalAuto,2,.personalAuto.vehicle.primaryUse,=,business,block,Primary use is business
+uwRule,PersonalAuto,3,.personalAuto.vehicle.vehicleDamage,=,Hail Damage,info,Damage caused by hail or accident
+uwRule,PersonalAuto,4,.personalAuto.vehicle.vehicleDamage,=,Accident Damage,info,Damage caused by hail or accident
+uwRule,PersonalAuto,5,.driver.suspendedLicenseLast5Years,=,YES,decline,License suspended in the last 5 years
+uwRule,PersonalAuto,6,.driver.convictedOfFraudArsonTheft,=,YES,reject,"Convicted of fraud, arson, or theft"
