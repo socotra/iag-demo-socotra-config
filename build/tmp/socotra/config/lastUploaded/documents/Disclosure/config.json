@@ -1,0 +1,10 @@
+{
+  "displayName": "Regulatory Disclosure",
+  "format": "pdf",
+  "pageSize": "A4",
+  "portrait": true,
+  "rendering": "prerendered",
+  "scope": "policy",
+  "selectionTimeBasis": "policyStartTime",
+  "trigger": "accepted"
+}

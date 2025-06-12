@@ -1,0 +1,30 @@
+{
+  "abstract" : false,
+  "data" : {
+    "producerId" : {
+      "displayName" : "Producer ID",
+      "type" : "string",
+      "maxLength" : 20000
+    },
+    "producerName" : {
+      "displayName" : "Producer Name",
+      "type" : "string?",
+      "maxLength" : 20000
+    },
+    "producerEmail" : {
+      "displayName" : "Producer Email",
+      "type" : "string?",
+      "maxLength" : 20000
+    },
+    "producerAffiliation" : {
+      "displayName" : "Producer Affiliation",
+      "type" : "string?",
+      "maxLength" : 20000
+    },
+    "commissionRate" : {
+      "displayName" : "Commission Rate",
+      "type" : "string?",
+      "maxLength" : 20000
+    }
+  }
+}

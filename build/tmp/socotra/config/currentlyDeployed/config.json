@@ -1,0 +1,16 @@
+{
+  "defaultTimeZone" : "America/New_York",
+  "defaultCurrency" : "USD",
+  "defaultTermDuration" : 12,
+  "defaultInstallmentPlan" : "FullPay",
+  "defaultDurationBasis" : "months",
+  "defaultBillingTrigger" : "issue",
+  "defaultBackdatedInstallmentsBilling" : "immediate",
+  "defaultDelinquencyPlan" : "Standard",
+  "defaultAutoRenewalPlan" : "Standard",
+  "defaultExcessCreditPlan" : "Standard",
+  "enableSerialInvoiceNumbering" : false,
+  "enableEntityAnonymization" : false,
+  "defaultScheduleUploadErrorsLimit" : 1,
+  "defaultInvoiceDocument" : "InvoiceDoc"
+}

@@ -1,0 +1,9 @@
+{
+  "scope" : "invoice",
+  "format" : "pdf",
+  "rendering" : "dynamic",
+  "selectionTimeBasis" : "currentTime",
+  "trigger" : "generated",
+  "portrait" : true,
+  "pageSize" : "letter"
+}

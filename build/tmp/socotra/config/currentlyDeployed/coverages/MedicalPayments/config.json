@@ -1,0 +1,6 @@
+{
+  "abstract" : false,
+  "displayName" : "Medical Payments",
+  "coverageTerms" : [ "PALimit!" ],
+  "charges" : [ "Premium", "GST", "Fee" ]
+}

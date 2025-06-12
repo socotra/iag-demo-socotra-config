@@ -1,0 +1,6 @@
+{
+  "abstract" : false,
+  "displayName" : "Babyseat",
+  "coverageTerms" : [ "PASplitLimit" ],
+  "charges" : [ "Premium", "GST", "Fee" ]
+}

@@ -1,0 +1,8 @@
+{
+  "displayName": "Semi-Annual",
+  "cadence": "semiannually",
+  "maxInstallmentsPerTerm": 10,
+  "installmentWeights": [
+    2
+  ]
+}

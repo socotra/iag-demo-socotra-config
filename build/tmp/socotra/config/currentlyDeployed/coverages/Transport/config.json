@@ -1,0 +1,6 @@
+{
+  "abstract" : false,
+  "displayName" : "Third Party",
+  "coverageTerms" : [ "PADeductible!", "PALimit!" ],
+  "charges" : [ "Premium", "GST", "FSL", "SD" ]
+}

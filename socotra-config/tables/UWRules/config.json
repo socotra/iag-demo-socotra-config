@@ -1,0 +1,37 @@
+{
+  "selectionTimeBasis": "termStartTime",
+  "columns": {
+    "scope": {
+      "dataType": "string",
+      "isKey": true
+    },
+    "productLine": {
+      "dataType": "string",
+      "isKey": true
+    },
+    "ruleId": {
+      "dataType": "int",
+      "isKey": true
+    },
+    "key": {
+      "dataType": "string",
+      "isKey": false
+    },
+    "condition": {
+      "dataType": "string",
+      "isKey": false
+    },
+    "value": {
+      "dataType": "string",
+      "isKey": false
+    },
+    "decision": {
+      "dataType": "string",
+      "isKey": false
+    },
+    "message": {
+      "dataType": "string",
+      "isKey": false
+    }
+  }
+}

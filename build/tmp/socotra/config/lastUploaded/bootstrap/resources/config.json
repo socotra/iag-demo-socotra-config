@@ -1,0 +1,27 @@
+{
+  "resourceInstances": {
+    "Disclosure01": {
+      "staticName": "Disclosure"
+    },
+    "Forms01": {
+      "staticName": "Forms"
+    },
+    "SR2201": {
+      "staticName": "SR22"
+    },
+    "invoiceDoc_v1": {
+      "staticName": "InvoiceDoc"
+    }
+  },
+  "resourceGroups": {
+    "initialGroup": {
+      "selectionStartTime": "1970-01-01T00:00:00Z",
+      "resourceNames": [
+        "Disclosure01",
+        "Forms01",
+        "SR2201",
+        "invoiceDoc_v1"
+      ]
+    }
+  }
+}

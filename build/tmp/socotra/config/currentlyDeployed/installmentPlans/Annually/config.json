@@ -1,0 +1,6 @@
+{
+  "displayName" : "Annually",
+  "cadence" : "annually",
+  "installmentWeights" : [ 2 ],
+  "maxInstallmentsPerTerm" : 10
+}

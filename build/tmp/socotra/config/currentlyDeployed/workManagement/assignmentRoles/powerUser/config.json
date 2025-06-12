@@ -1,0 +1,8 @@
+{
+  "appliesTo" : [ "quote", "policy", "transaction", "account", "invoice" ],
+  "exclusive" : false,
+  "qualification" : {
+    "underwriting" : "UW-3+",
+    "operations" : "OP-4+"
+  }
+}

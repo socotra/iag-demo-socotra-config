@@ -1,0 +1,22 @@
+{
+  "displayName" : "Rollin App Details",
+  "abstract" : false,
+  "data" : {
+    "telematics_opt_in" : {
+      "displayName" : "Telematics Opt In",
+      "type" : "string",
+      "maxLength" : 20000,
+      "options" : [ "Yes", "No" ]
+    },
+    "previous_quarter_odometer" : {
+      "displayName" : "Previous Quarter Odometer",
+      "type" : "string",
+      "maxLength" : 20000
+    },
+    "expected_quarter_odometer" : {
+      "displayName" : "Expected Quarter Odometer",
+      "type" : "string",
+      "maxLength" : 20000
+    }
+  }
+}

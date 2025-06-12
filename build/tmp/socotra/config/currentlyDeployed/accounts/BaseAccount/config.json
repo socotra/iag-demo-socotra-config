@@ -1,0 +1,12 @@
+{
+  "abstract" : true,
+  "data" : {
+    "tier" : {
+      "displayName" : "Tier",
+      "type" : "string?",
+      "maxLength" : 20000,
+      "options" : [ "Gold", "Silver", "Bronze" ]
+    }
+  },
+  "numberingTrigger" : "validation"
+}

@@ -1,0 +1,7 @@
+{
+  "appliesTo" : [ "account", "invoice" ],
+  "exclusive" : false,
+  "qualification" : {
+    "operations" : "OP-1"
+  }
+}

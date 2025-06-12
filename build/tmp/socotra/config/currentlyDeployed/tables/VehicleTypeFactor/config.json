@@ -1,0 +1,21 @@
+{
+  "columns" : {
+    "make" : {
+      "dataType" : "string",
+      "isKey" : true
+    },
+    "model" : {
+      "dataType" : "string",
+      "isKey" : true
+    },
+    "year" : {
+      "dataType" : "int",
+      "isKey" : true
+    },
+    "rate" : {
+      "dataType" : "decimal",
+      "isKey" : false
+    }
+  },
+  "selectionTimeBasis" : "termStartTime"
+}

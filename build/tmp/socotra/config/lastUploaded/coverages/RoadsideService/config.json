@@ -1,0 +1,12 @@
+{
+  "abstract": false,
+  "displayName": "Roadside Assistance",
+  "coverageTerms": [
+    "RSLimit"
+  ],
+  "charges": [
+    "Premium",
+    "GST",
+    "Fee"
+  ]
+}

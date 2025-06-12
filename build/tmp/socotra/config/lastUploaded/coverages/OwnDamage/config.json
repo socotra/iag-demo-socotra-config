@@ -1,0 +1,14 @@
+{
+  "abstract": false,
+  "displayName": "Own Damage",
+  "coverageTerms": [
+    "PADeductible!",
+    "PALimit!"
+  ],
+  "charges": [
+    "Premium",
+    "GST",
+    "FSL",
+    "SD"
+  ]
+}

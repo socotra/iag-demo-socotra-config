@@ -1,0 +1,12 @@
+{
+  "abstract": false,
+  "displayName": "Collision",
+  "coverageTerms": [
+    "PADeductible"
+  ],
+  "charges": [
+    "Premium",
+    "GST",
+    "Fee"
+  ]
+}

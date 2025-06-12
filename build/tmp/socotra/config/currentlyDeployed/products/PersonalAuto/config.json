@@ -1,0 +1,60 @@
+{
+  "abstract" : false,
+  "defaultTermDuration" : 6,
+  "displayName" : "Personal Auto",
+  "eligibleAccountTypes" : [ "MemberAccount" ],
+  "contents" : [ "PersonalVehicle+" ],
+  "documents" : [ "InvoiceDoc", "Forms", "Disclosure" ],
+  "charges" : [ "Premium", "GST", "Fee", "FSL", "SD" ],
+  "data" : {
+    "priorclaims" : {
+      "displayName" : "How many prior claims have you had on the vehicle?",
+      "type" : "string",
+      "maxLength" : 20000,
+      "options" : [ "0", "1", "2", "3", "4", "5+" ]
+    },
+    "felony" : {
+      "displayName" : "Has any household member been convicted of a felony in the past 10 years?",
+      "type" : "string",
+      "maxLength" : 20000,
+      "options" : [ "No", "Yes" ]
+    },
+    "fraud" : {
+      "displayName" : "Has any household member been convicted of activities related to insurance fraud?",
+      "type" : "string",
+      "maxLength" : 20000,
+      "options" : [ "No", "Yes" ]
+    },
+    "claims" : {
+      "displayName" : "Had any insurance claim denied, cancelled or withdrawn during an investigation by the insurance provider?",
+      "type" : "string",
+      "maxLength" : 20000,
+      "options" : [ "Yes", "No" ]
+    },
+    "suspendedLicense" : {
+      "displayName" : "Has any driver ever had a suspended license in last 5 years?",
+      "type" : "string",
+      "scope" : "P",
+      "maxLength" : 20000,
+      "options" : [ "No", "Yes" ]
+    },
+    "convictions" : {
+      "displayName" : "Has any driver been convicted of fraud, arson or theft?",
+      "type" : "string",
+      "scope" : "P",
+      "maxLength" : 20000,
+      "options" : [ "No", "Yes" ]
+    }
+  },
+  "staticData" : {
+    "policyNumber" : {
+      "displayName" : "Policy Number",
+      "type" : "string",
+      "maxLength" : 20000,
+      "tag" : [ "quoteList:true", "policyList:true", "searchQuoteCard:true", "searchPolicyCard:true" ]
+    }
+  },
+  "numberingPlan" : "CA_Policy_numbering_plan",
+  "numberingString" : "ROL",
+  "numberingTrigger" : "creation"
+}

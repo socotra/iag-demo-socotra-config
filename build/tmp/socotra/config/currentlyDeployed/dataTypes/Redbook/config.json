@@ -1,0 +1,56 @@
+{
+  "displayName" : "Vehicle details from Redbook",
+  "abstract" : false,
+  "data" : {
+    "value_boost_percentage" : {
+      "displayName" : "Value boost Percentage",
+      "type" : "string?",
+      "maxLength" : 20000
+    },
+    "v_facts_segment" : {
+      "displayName" : "V Facts Segment",
+      "type" : "string?",
+      "maxLength" : 20000
+    },
+    "v_facts_class" : {
+      "displayName" : "V Facts Class",
+      "type" : "string?",
+      "maxLength" : 20000
+    },
+    "badge_secondary_description" : {
+      "displayName" : "Badge Secondary Description",
+      "type" : "string?",
+      "maxLength" : 20000
+    },
+    "vehicle_family" : {
+      "displayName" : "Vehicle Family",
+      "type" : "string?",
+      "maxLength" : 20000
+    },
+    "vehicle_family_code" : {
+      "displayName" : "Vehicle Family Code",
+      "type" : "string?",
+      "maxLength" : 20000
+    },
+    "vehicle_style" : {
+      "displayName" : "Vehicle Style",
+      "type" : "string?",
+      "maxLength" : 20000
+    },
+    "vehicle_variant" : {
+      "displayName" : "Vehicle Variant",
+      "type" : "string?",
+      "maxLength" : 20000
+    },
+    "vehicle_description" : {
+      "displayName" : "Vehicle Description",
+      "type" : "string?",
+      "maxLength" : 20000
+    },
+    "vehicle_redbook_id" : {
+      "displayName" : "Vehicle Redbook Id",
+      "type" : "string?",
+      "maxLength" : 20000
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "abstract" : false,
+  "data" : {
+    "firstName" : {
+      "displayName" : "First Name",
+      "type" : "string",
+      "maxLength" : 20000
+    },
+    "middleName" : {
+      "displayName" : "Middle Name",
+      "type" : "string?",
+      "maxLength" : 20000
+    },
+    "lastName" : {
+      "displayName" : "Last Name",
+      "type" : "string",
+      "maxLength" : 20000
+    },
+    "dateOfBirth" : {
+      "displayName" : "Date of Birth",
+      "type" : "date"
+    },
+    "email" : {
+      "displayName" : "Email",
+      "type" : "string?",
+      "maxLength" : 20000
+    },
+    "phoneNumber" : {
+      "displayName" : "Phone Number",
+      "type" : "string",
+      "maxLength" : 20000
+    }
+  }
+}

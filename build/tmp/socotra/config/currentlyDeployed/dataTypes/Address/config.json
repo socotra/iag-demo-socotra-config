@@ -1,0 +1,26 @@
+{
+  "abstract" : false,
+  "data" : {
+    "address_street" : {
+      "displayName" : "Street",
+      "type" : "string",
+      "maxLength" : 20000
+    },
+    "address_city" : {
+      "displayName" : "City",
+      "type" : "string",
+      "maxLength" : 20000
+    },
+    "address_zipcode" : {
+      "displayName" : "Zip Code",
+      "type" : "string",
+      "maxLength" : 20000
+    },
+    "state" : {
+      "displayName" : "state",
+      "type" : "string",
+      "maxLength" : 20000,
+      "options" : [ "NSW", "QLD", "NT", "SA", "VIC", "TAS" ]
+    }
+  }
+}

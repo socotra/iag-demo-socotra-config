@@ -1,0 +1,12 @@
+{
+  "abstract": false,
+  "displayName": "Comprehensive",
+  "coverageTerms": [
+    "PADeductible"
+  ],
+  "charges": [
+    "Premium",
+    "GST",
+    "Fee"
+  ]
+}

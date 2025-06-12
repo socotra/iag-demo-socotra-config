@@ -1,0 +1,6 @@
+{
+  "displayName" : "Quarterly",
+  "cadence" : "quarterly",
+  "installmentWeights" : [ 2 ],
+  "maxInstallmentsPerTerm" : 10
+}

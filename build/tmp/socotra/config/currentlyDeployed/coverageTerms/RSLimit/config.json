@@ -1,0 +1,14 @@
+{
+  "type" : "limit",
+  "displayName" : "Limit",
+  "options" : {
+    "RSL100" : {
+      "displayName" : "$100",
+      "value" : 100
+    },
+    "*RSL50" : {
+      "displayName" : "$50",
+      "value" : 50
+    }
+  }
+}

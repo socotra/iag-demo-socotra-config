@@ -1,0 +1,8 @@
+{
+  "displayName": "Monthly",
+  "cadence": "monthly",
+  "maxInstallmentsPerTerm": 10,
+  "installmentWeights": [
+    2
+  ]
+}

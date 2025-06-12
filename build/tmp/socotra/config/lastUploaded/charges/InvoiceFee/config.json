@@ -1,0 +1,5 @@
+{
+  "category": "invoiceFee",
+  "handling": "flat",
+  "invoicing": "next"
+}

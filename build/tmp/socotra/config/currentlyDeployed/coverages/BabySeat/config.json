@@ -1,0 +1,6 @@
+{
+  "abstract" : false,
+  "displayName" : "Baby Seat",
+  "coverageTerms" : [ "PADeductible!", "PALimit!" ],
+  "charges" : [ "Premium", "GST", "FSL", "SD" ]
+}

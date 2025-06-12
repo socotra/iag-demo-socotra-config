@@ -1,0 +1,10 @@
+{
+  "displayName" : "SR022",
+  "scope" : "policy",
+  "format" : "pdf",
+  "rendering" : "prerendered",
+  "selectionTimeBasis" : "policyStartTime",
+  "trigger" : "accepted",
+  "portrait" : true,
+  "pageSize" : "A4"
+}

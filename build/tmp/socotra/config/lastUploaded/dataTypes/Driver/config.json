@@ -1,0 +1,24 @@
+{
+  "abstract": false,
+  "extend": "Person",
+  "data": {
+    "licenseNum": {
+      "displayName": "License Number",
+      "type": "string?",
+      "maxLength": 20000,
+      "regex": "^[0-9]{9}$"
+    },
+    "driverDesignation": {
+      "displayName": "Driver Designation",
+      "type": "string?",
+      "maxLength": 20000,
+      "options": [
+        "Primary",
+        "Secondary",
+        "Occasional",
+        "Student",
+        "Excluded Driver"
+      ]
+    }
+  }
+}

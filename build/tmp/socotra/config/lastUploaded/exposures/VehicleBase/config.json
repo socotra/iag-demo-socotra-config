@@ -1,0 +1,40 @@
+{
+  "abstract": true,
+  "data": {
+    "makeSymbol": {
+      "displayName": "Make Symbol",
+      "type": "string",
+      "maxLength": 20000,
+      "scope": "Q, QQ, P"
+    },
+    "modelSymbol": {
+      "displayName": "Model Symbol",
+      "type": "string",
+      "maxLength": 20000,
+      "scope": "QQ,P"
+    },
+    "year": {
+      "displayName": "Year",
+      "type": "int",
+      "min": "1970",
+      "max": "2025"
+    },
+    "vin": {
+      "displayName": "VIN",
+      "type": "string",
+      "maxLength": 20000,
+      "regex": "[(A-H|J-N|P|R-Z|0-9)]{17}",
+      "scope": "QQ, Q, P"
+    },
+    "annualMileage": {
+      "displayName": "Annual Mileage",
+      "type": "int"
+    },
+    "value": {
+      "displayName": "Vehicle's Estimated Value",
+      "type": "decimal",
+      "min": "1000",
+      "max": "2000000"
+    }
+  }
+}

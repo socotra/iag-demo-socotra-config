@@ -1,0 +1,6 @@
+{
+  "producers" : [ "PD-1", "PD-2", "PD-3", "PD-4" ],
+  "underwriting" : [ "UW-1", "UW-2", "UW-3", "UW-4" ],
+  "operations" : [ "OP-1", "OP-2", "OP-3", "OP-4" ],
+  "claims" : [ "CL-1", "CL-2", "CL-3", "CL-4" ]
+}
