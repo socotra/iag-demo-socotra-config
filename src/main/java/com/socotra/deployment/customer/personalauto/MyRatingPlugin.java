@@ -1,19 +1,58 @@
 package com.socotra.deployment.customer.personalauto;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.socotra.deployment.customer.*;
 
 import com.socotra.coremodel.RatingItem;
 import com.socotra.coremodel.RatingSet;
 import com.socotra.platform.tools.ULID;
 
+import java.io.OutputStream;
 import java.math.BigDecimal;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-
+import java.util.Map;
 
 
 public class MyRatingPlugin implements RatePlugin {
+
+    private static final String LAMBDA_URL = "https://bjh5pm3o72nwzzti3tqfl3ekbi0eebcd.lambda-url.us-east-2.on.aws/";
+    private static final ObjectMapper MAPPER = new ObjectMapper();
+
+    private RatingSet callRemoteLambda(Object requestPayload) {
+        try {
+            URL url = new URL(LAMBDA_URL);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Content-Type", "application/json");
+            connection.setDoOutput(true);
+
+            // Wrap payload in { "body": "<stringified JSON>" }
+            Map<String, String> bodyWrapper = new HashMap<>();
+            bodyWrapper.put("body", MAPPER.writeValueAsString(requestPayload));
+            String finalJson = MAPPER.writeValueAsString(bodyWrapper);
+
+            try (OutputStream os = connection.getOutputStream()) {
+                os.write(finalJson.getBytes());
+            }
+
+            if (connection.getResponseCode() != 200) {
+                throw new RuntimeException("Failed : HTTP error code : " + connection.getResponseCode());
+            }
+
+            JsonNode root = MAPPER.readTree(connection.getInputStream());
+            Map <String, Object> result = MAPPER.treeToValue(root, Map.class);
+            return (RatingSet) result.get("ratingSet");
+
+        } catch (Exception e) {
+            throw new RuntimeException("Error calling Lambda: " + e.getMessage(), e);
+        }
+    }
 
     private RatingItem flatRateWithTaxes(ULID locator, double baseAmount) {
         double total =
@@ -523,119 +562,11 @@ public class MyRatingPlugin implements RatePlugin {
 
     @Override
     public RatingSet rate(PersonalAutoQuoteRequest request) {
-        PersonalAutoQuote personalAutoQuote = request.quote();
-        BigDecimal duration = request.duration();
-        List<RatingItem> ratingItems = new ArrayList<>();
-        for(PersonalVehicle vehicle : personalAutoQuote.personalVehicles()) {
-//            if (vehicle.bodilyInjury() != null) {
-//                ratingItems.add(rateBodilyInjury(vehicle));
-//            }
-//            if (vehicle.collision() != null) {
-//                ratingItems.add(rateCollision(vehicle));
-//            }
-//            if (vehicle.comprehensive() != null) {
-//                ratingItems.add(rateComprehensive(vehicle));
-//            }
-            // adding additional coverages to increase premium
-            // if (vehicle.roadsideService() != null) {
-            //     ratingItems.add(rateRoadSideService(vehicle));
-            // }
-            // if (vehicle.propertyDamage() != null) {
-            //     ratingItems.add(ratePropertyDamage(vehicle));
-            // }
-            // if (vehicle.underinsuredMotorist() != null) {
-            //     ratingItems.add(rateUnderinsuredMotorist(vehicle));
-            // }
-            // if (vehicle.uninsuredMotorist() != null) {
-            //     ratingItems.add(rateUninsuredMotorist(vehicle));
-            // }
-            // if (vehicle.medicalPayments() != null) {
-            //     ratingItems.add(rateMedicalPayments(vehicle));
-            // }
-            if (vehicle.ownDamage() != null) {
-                ratingItems.add(rateOwnDamage(vehicle, personalAutoQuote));
-            }
-            if (vehicle.fire() != null) {
-                ratingItems.add(rateFire(vehicle, personalAutoQuote));
-            }
-            if (vehicle.theft() != null) {
-                ratingItems.add(rateTheft(vehicle, personalAutoQuote));
-            }
-            if (vehicle.thirdParty() != null) {
-                ratingItems.add(rateThirdParty(vehicle, personalAutoQuote));
-            }
-            if (vehicle.windscreen() != null) {
-                ratingItems.add(rateWindscreen(vehicle));
-            }
-            if (vehicle.babySeat() != null) {
-                ratingItems.add(rateBabySeat(vehicle));
-            }
-        }
-
-        if (ratingItems.isEmpty()) {
-            ratingItems.add(flatRateWithTaxes(request.quote().locator(), 35));
-        }
-
-        return RatingSet.builder().ok(true).ratingItems(ratingItems).build();
+        return callRemoteLambda(request);
     }
 
     @Override
     public RatingSet rate(PersonalAutoRequest request) {
-        BigDecimal duration = request.duration();
-        List<RatingItem> ratingItems = new ArrayList<>();
-        List<PersonalVehicle> personalVehicles = new ArrayList<>();
-        request.segment().ifPresent(s -> personalVehicles.addAll(s.personalVehicles()));
-        for(PersonalVehicle vehicle : personalVehicles){
-//            if(vehicle.bodilyInjury() != null) {
-//                ratingItems.add(rateBodilyInjury(vehicle));
-//            }
-//            if(vehicle.collision() != null) {
-//                ratingItems.add(rateCollision(vehicle));
-//            }
-//            if(vehicle.comprehensive() != null) {
-//                ratingItems.add(rateComprehensive(vehicle));
-//            }
-            // adding additional coverages to increase premium
-            // if(vehicle.roadsideService() != null) {
-            //     ratingItems.add(rateRoadSideService(vehicle));
-            // }
-            // if(vehicle.propertyDamage() != null) {
-            //     ratingItems.add(ratePropertyDamage(vehicle));
-            // }
-            // if(vehicle.underinsuredMotorist() != null) {
-            //     ratingItems.add(rateUnderinsuredMotorist(vehicle));
-            // }
-            // if(vehicle.uninsuredMotorist() != null) {
-            //     ratingItems.add(rateUninsuredMotorist(vehicle));
-            // }
-            // if(vehicle.medicalPayments() != null) {
-            //     ratingItems.add(rateMedicalPayments(vehicle));
-            // }
-            if (vehicle.ownDamage() != null) {
-                ratingItems.add(rateOwnDamage(vehicle, request.segment().get()));
-            }
-            if (vehicle.fire() != null) {
-                ratingItems.add(rateFire(vehicle, request.segment().get()));
-            }
-            if (vehicle.theft() != null) {
-                ratingItems.add(rateTheft(vehicle, request.segment().get()));
-            }
-            if (vehicle.thirdParty() != null) {
-                ratingItems.add(rateThirdParty(vehicle, request.segment().get()));
-            }
-            if (vehicle.windscreen() != null) {
-                ratingItems.add(rateWindscreen(vehicle));
-            }
-            if (vehicle.babySeat() != null) {
-                ratingItems.add(rateBabySeat(vehicle));
-            }
-        }
-
-        //request.segment().ifPresent(s-> ratingItems.add(rateFee(s.locator(), duration)));
-        if (ratingItems.isEmpty()) {
-            request.segment().ifPresent(s-> ratingItems.add(flatRateWithTaxes(request.segment().get().locator(), 35)));
-        }
-
-        return RatingSet.builder().ok(true).ratingItems(ratingItems).build();
+        return callRemoteLambda(request);
     }
 }
